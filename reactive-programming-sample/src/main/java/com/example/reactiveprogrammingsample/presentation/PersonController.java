@@ -37,7 +37,7 @@ public class PersonController {
         return personService.update(person);
     }
 
-    @DeleteMapping(path = "id")
+    @DeleteMapping(path = "{id}")
     Mono<Void> delete(@PathVariable Long id) {
         return personService.deleteById(id);
     }
